@@ -1,4 +1,8 @@
 <div align="center">
+    <img src="./Images/Sepsis.jpg" alt="Sepsis Image">
+</div>
+
+<div align="center">
   <h1><b>FastAPI-Sepsis-Prediction-API</b></h1>
 </div>
 
@@ -6,10 +10,12 @@
 
 - [📕 Table of Contents](#table-of-contents)
 - [🎈 Introduction](#introduction)
-- [🛠 Project Structure](#project-structure)
+- [♻ Data Features](#data-features)
 - [📝 Overview](#overview)
+- [📊 Exploratory Data Analysis](#Exploratory-Data-Analysis)
 - [🔧 Installation](#installation)
 - [🚀 Usage](#usage)
+- [📝 Article](#article)
 - [🤝 Contributing](#contributing)
 - [🔏 License](#license)
 - [📚 References](#references)
@@ -31,32 +37,54 @@ In the fast-paced world of healthcare, every second counts. Timely intervention 
 - **Insurance**: Indication of whether the patient holds a valid insurance card.
 - **Sepsis**: Classification indicating whether the patient has sepsis (Positive) or not (Negative).
 
-## 🛠 Project Structure
-FastAPI-Sepsis-Prediction
-├── data
-│ └── patient_data.csv # Dataset containing patient information
-├── models
-│ └── sepsis_prediction_model.joblib # Trained machine learning model
-├── notebooks
-│ └── data_exploration.ipynb # Jupyter notebook for data exploration
-├── src
-│ ├── app.py # FastAPI application for sepsis prediction
-│ └── utils.py # Utility functions for data preprocessing
-├── README.md # Project overview and instructions
-└── requirements.txt # Dependencies required for running the project
-
-
 ## 📝 Overview
 This project utilizes machine learning algorithms and FastAPI to predict sepsis onset in real-time. By analyzing patient data, our API provides clinicians with early warnings of potential sepsis occurrences, enabling proactive intervention and improved patient outcomes.
 
+## 📊 Exploratory Data Analysis
+Explore the dataset used for training the machine learning model. View data visualizations and insights gained from the analysis in the [Exploratory Data Analysis](./notebooks.ipynb) notebook.
+
+![alt text](./Images/univariate.png)
+![alt text](./Images/bivariate.png)
+![alt text](./Images/multivariate.png)
+
 ## 🔧 Installation
 1. Clone this repository to your local machine.
-2. Install the required dependencies using `pip install -r requirements.txt`.
+    ```bash
+    git clone https://github.com/Elphoxa/FastAPI-Sepsis-Prediction-API.git
+    ```
+2. Navigate into the repository directory:
+   
+    ```bash
+    cd FastAPI-Sepsis-Prediction-API
+    ```
 
+3. Create a virtual environment
+
+    ```bash
+    python -m venv env
+    ```
+
+4. Activate the virtual environment
+
+    ```bash
+    virtual_env/Scripts/activate
+    ```
+5. Install the required dependencies
+    ```bash
+    pip install -r requirements.txt
+    ```
 ## 🚀 Usage
 1. Navigate to `main.py`
-2. Run the FastAPI application: `uvicorn app:app --host 0.0.0.0 --port 8000`.
+2. Run the FastAPI application:
+    ```bash
+    uvicorn app:app --host 0.0.0.0 --port 8000
+    ```
 3. Access the API endpoints to predict sepsis onset and integrate the API into existing healthcare systems.
+![alt text](./Images/image.png)
+![alt text](./Images/image_2.png)
+
+
+**Docker Image:** The Docker image for the FastAPI Sepsis Prediction API is available on [Docker Hub](https://hub.docker.com/repository/docker/elphoxa56/fastapi-sepsis-prediction-api).
 
 ## 📝 Article
 Read the article on this project [Here](https://www.linkedin.com/pulse/revolutionizing-healthcare-ai-predicting-sepsis-efosa-dave-omosigho-kmhvf)
